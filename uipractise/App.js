@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/components/Home';
+import Details from './src/components/Details';
 
 const HomeStack = createNativeStackNavigator();
 
@@ -17,7 +18,13 @@ const App = () => {
           component={Home}
           options={{headerShown: false}}
         />
-        {/* <HomeStack.Screen name="second screen" component={SecondScreen} /> */}
+        <HomeStack.Screen
+          name="details"
+          component={Details}
+          options={{
+            headerShown: false,
+          }}
+        />
       </HomeStack.Navigator>
     </NavigationContainer>
   );

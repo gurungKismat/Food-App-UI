@@ -6,6 +6,7 @@ import {
   Image,
   FlatList,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -15,7 +16,7 @@ import colors from '../../assets/colors/colors';
 
 // Feather.loadFont();
 
-export default Home = () => {
+export default Home = ({navigation}) => {
   const renderItem = ({item}) => {
     return (
       <View
@@ -81,7 +82,13 @@ export default Home = () => {
         <View style={styles.popularWrapper}>
           <Text style={styles.popularTitle}>Popular</Text>
           {popularData.map(item => (
-            <View
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('details', {
+                  item: item,
+                })
+              }
+              key={item.id}
               style={[
                 styles.popularCardWrapper,
                 {
@@ -116,14 +123,14 @@ export default Home = () => {
                       size={12}
                       color={colors.textDark}
                     />
-                    <Text style={styles.ratingText}>4.0</Text>
+                    <Text style={styles.ratingText}>{item.rating}</Text>
                   </View>
                 </View>
               </View>
               <View style={styles.popularRight}>
                 <Image source={item.image} style={styles.popularImage} />
               </View>
-            </View>
+            </TouchableOpacity>
           ))}
         </View>
       </ScrollView>

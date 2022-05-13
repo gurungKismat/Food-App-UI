@@ -5,22 +5,83 @@ const popularData = [
     title: 'Primavera Pizza',
     weight: '540 gr',
     rating: '5',
+    price: 3.99,
+    size: 'Medium',
+    sizeNumber: 14,
+    crust: 'Thin Crust',
+    deliveryTime: 30,
+    ingredients: [
+      {
+        id: 1,
+        name: 'Ham',
+        image: require('../images/ham.png'),
+      },
+      {
+        id: 2,
+        name: 'Tomato',
+        image: require('../images/tomato.png'),
+      },
+      {
+        id: 3,
+        name: 'Cheese',
+        image: require('../images/cheese.png'),
+      },
+      {
+        id: 4,
+        name: 'Garlic',
+        image: require('../images/garlic.png'),
+      },
+    ],
   },
 
   {
     id: 2,
     image: require('../images/pizza2.png'),
     title: 'Vegetarian Pizza',
-    weight: '500 gr',
+    weight: '450 gr',
     rating: '4',
+    price: 5.99,
+    size: 'Small',
+    sizeNumber: 14,
+    crust: 'Thick Crust',
+    deliveryTime: 40,
+    ingredients: [
+      {
+        id: 1,
+        name: 'Cheese',
+        image: require('../images/cheese.png'),
+      },
+      {
+        id: 2,
+        name: 'Garlic',
+        image: require('../images/garlic.png'),
+      },
+    ],
   },
 
   {
     id: 3,
     image: require('../images/pizza3.png'),
     title: 'Pepperoni Pizza',
-    weight: '450 gr',
+    weight: '550 gr',
     rating: '4.5',
+    price: 9.99,
+    size: 'Large',
+    sizeNumber: 18,
+    crust: 'Thin Crust',
+    deliveryTime: 20,
+    ingredients: [
+      {
+        id: 1,
+        name: 'Tomato',
+        image: require('../images/tomato.png'),
+      },
+      {
+        id: 2,
+        name: 'Cheese',
+        image: require('../images/cheese.png'),
+      },
+    ],
   },
 ];
 
